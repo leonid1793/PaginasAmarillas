@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".activities.DetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_text">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/de"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:id="@+id/item_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentTop="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/item_name_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/detail_name_tools"
+                            android:textSize="@dimen/app_primary_text"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary"/>
+
+                        <TextView
+                            android:id="@+id/item_address_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/detail_address_tools"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/app_secondary_text"
+                            android:textColor="@color/secondaryTextColor"/>
+
+                        <TextView
+                            android:id="@+id/item_phone_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/detail_phone_tools"
+                            android:textSize="@dimen/app_secondary_text"
+                            android:textColor="@color/secondaryTextColor"/>
+
+                        <TextView
+                            android:id="@+id/item_category_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/detail_category_tools"
+                            android:textSize="@dimen/app_extra_text"
+                            android:textColor="@color/primary"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/item_logo_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        tools:src="@mipmap/ic_launcher"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_info_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_below="@id/item_company">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_info_text"
+                        android:textSize="@dimen/app_primary_text"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondaryTextColor"
+                        android:layout_marginBottom="24dp"/>
+
+                    <TextView
+                        android:id="@+id/info_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        tools:text="@string/detail_info_tools"
+                        android:textSize="@dimen/app_secondary_text"
+                        android:textColor="@color/secondaryTextColor"
+                        android:layout_below="@id/item_company"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/de"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:layout_centerInParent="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="visitWebsite"
+                            android:text="@string/detail_web_button"
+                            android:textColor="@color/primary"
+                            app:iconTint="@color/primary"
+                            app:icon="@drawable/ic_website_detail"
+                            app:strokeColor="@color/primary" />
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_email_button"
+                            android:textColor="@color/primary"
+                            app:strokeColor="@color/primary"
+                            app:iconTint="@color/primary"
+                            app:icon="@drawable/ic_email_detail"
+                            android:onClick="sendEmail"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_sms_button"
+                            android:textColor="@color/primary"
+                            app:strokeColor="@color/primary"
+                            app:iconTint="@color/primary"
+                            app:icon="@drawable/ic_sms_detail"
+                            android:onClick="sendSMS"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_share_button"
+                            android:textColor="@color/primary"
+                            app:strokeColor="@color/primary"
+                            app:iconTint="@color/primary"
+                            app:icon="@drawable/ic_share_detail"
+                            android:onClick="shareContent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_call_button"
+                            android:textColor="@color/primary"
+                            app:strokeColor="@color/primary"
+                            app:iconTint="@color/primary"
+                            app:icon="@drawable/ic_call_detail"
+                            android:onClick="callTo"/>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

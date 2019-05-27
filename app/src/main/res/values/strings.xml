@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Páginas Amarillas</string>
+    <string name="detail_name_tools">Nombre de la compañía</string>
+    <string name="detail_address_tools">Dirección de la compañía</string>
+    <string name="detail_phone_tools">Teléfono de la compañía</string>
+    <string name="detail_category_tools">Categoría de la compañía</string>
+    <string name="detail_info_tools">Información sobre la compañía</string>
+    <string name="detail_info_text">Información</string>
+    <string name="main_search_button">Buscar</string>
+    <string name="main_category_input">Escribe una categoría</string>
+    <string name="main_category_empty">Ingrese una categoría</string>
+    <string name="detail_web_button">Web</string>
+    <string name="detail_email_button">E-mail</string>
+    <string name="detail_sms_button">SMS</string>
+    <string name="detail_share_button">Compartir</string>
+    <string name="detail_call_button">Llamar</string>
+</resources>

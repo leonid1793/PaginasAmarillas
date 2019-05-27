@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_primary_text">20sp</dimen>
+    <dimen name="app_secondary_text">16sp</dimen>
+    <dimen name="app_extra_text">14sp</dimen>
+    <dimen name="item_logo_width_portrait">320dp</dimen>
+    <dimen name="item_logo_height_portrait">120dp</dimen>
+    <dimen name="item_logo_width_landscape">450dp</dimen>
+    <dimen name="item_logo_height_landscape">150dp</dimen>
+</resources>
